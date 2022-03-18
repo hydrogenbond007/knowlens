@@ -1,8 +1,8 @@
 import os
 from collections import defaultdict
-from transformers import BertTokenizer, XLNetTokenizer
+from transformers import XLNetTokenizer
+from warnings import warn
 
-# tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 tokenizer = XLNetTokenizer.from_pretrained("xlnet-base-cased")
 
 
@@ -25,7 +25,8 @@ def get_token_to_paths_mapping(directories: list):
     for directory in directories:
         for file_name in os.listdir(directory):
             if not file_name.endswith(".md"):
-                raise ValueError("Right now only markdown files are supported")
+                warn(f"Ignoring file: {file_name}")
+                continue
 
             # tokenize filename in case there are files with similar, but not exactly similar, names
             token = tokenize(file_name)
