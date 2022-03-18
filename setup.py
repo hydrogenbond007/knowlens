@@ -1,4 +1,3 @@
-from numpy import require
 from setuptools import setup
 
 
