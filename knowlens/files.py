@@ -6,10 +6,16 @@ summarizer = pipeline("summarization")
 
 
 def merge(paths: list, output_file_path: str):
+    all_files = ""
+
+    # load all files into one string
     for path in paths:
         with open(path, "r") as f:
-            summarization = summarizer(f.readlines())
-            print(summarization)
+            all_files += f.readlines() + "\n"
+    
+    summarization = summarizer(all_files)
+    with open(output_file_path, "w") as f:
+        f.write(summarization)
 
 
 
