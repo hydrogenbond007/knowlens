@@ -1,4 +1,1 @@
-
-
-
-this is a test
+the GIA is the "Grant Investigation Agency". It's part of Gitcoin DAO's Fraud Detection and Defense workstream. It's goal is to filter incoming grant proposals for being fraudulent or invalid (according to the community).
