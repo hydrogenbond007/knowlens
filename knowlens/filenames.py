@@ -35,6 +35,3 @@ def get_token_to_paths_mapping(directories: list):
     return dict(token_to_paths_mapping)
 
 
-if __name__ == "__main__":
-    tokens_to_paths = get_token_to_paths_mapping(["./data/knowledge_base1", "./data/knowledge_base2"])
-    print(tokens_to_paths)
