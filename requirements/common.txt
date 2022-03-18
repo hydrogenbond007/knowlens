@@ -7,7 +7,6 @@ huggingface-hub==0.4.0
 idna==3.3
 iniconfig==1.1.1
 joblib==1.1.0
--e git+ssh://git@github.com/nollied/knowlens.git@ec15de5e4530a302e9eb98d8f4f47e11587e5410#egg=knowlens
 numpy==1.22.3
 packaging==21.3
 pluggy==1.0.0
